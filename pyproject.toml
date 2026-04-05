@@ -1,12 +1,14 @@
 [build-system]
 requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "wistfare"
 version = "0.1.0"
 description = "Wistfare Serverless GPU Platform SDK"
+readme = "README.md"
 requires-python = ">=3.10"
+license = {text = "MIT"}
 dependencies = [
     "httpx>=0.27.0",
     "click>=8.0",
@@ -14,6 +16,11 @@ dependencies = [
 
 [project.scripts]
 wistfare = "wistfare.cli.main:cli"
+
+[project.urls]
+Homepage = "https://cloud.wistfare.com"
+Documentation = "https://github.com/Wistfare/wistfare-python"
+Repository = "https://github.com/Wistfare/wistfare-python"
 
 [tool.setuptools.packages.find]
 where = ["src"]
